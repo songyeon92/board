@@ -19,15 +19,12 @@ app.use(express.static("public"));
 
 const posts = [];
 
+
 app.get("/", (req, res)=>{
   res.render("home", { 
     homeStartingContent: homeStartingContent, 
     posts: posts 
   });
-
-
-
-  
 });
 
 app.get("/about", (req, res)=>{
@@ -67,6 +64,7 @@ app.get("/posts/:post_id", (req, res) => {
   });
   
 });
+
 
 
 app.listen(3000, function() {

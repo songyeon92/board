@@ -1,4 +1,4 @@
-<%- include( "./partials/header" ); -%> 
+<%- include("partials/header"); -%>
 
 
 
@@ -6,10 +6,15 @@
 <p><%= homeStartingContent %></p>
 
 <% posts.forEach((post)=>{ %>
-<h1><%= post.title %></h1>  
-<p><%= post.content %></p>
+    <h1><%= post.title %></h1>  
+    <p>
+        <%= post.content.substring(0, 100) + " ..."; %>
+        <a href="/posts/<%=post.title %>">Read me</a>
+    </p> 
+    
+
 <% }); %> 
 
 
-<%- include( "./partials/footer" ); -%> 
+<%- include("partials/footer"); -%>
 
